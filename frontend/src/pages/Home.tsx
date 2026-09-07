@@ -91,12 +91,12 @@ const initialForm: EnquiryCreate = { name: "", phone: "", program: "", message: 
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-function Logo({ compact = false, testId }: { compact?: boolean; testId: string }) {
+function Logo({ compact = false, hero = false, testId }: { compact?: boolean; hero?: boolean; testId: string }) {
   return (
     <img
       src={compact ? "/gmca-emblem.webp" : "/gmca-logo.webp"}
       alt="Genius Mind Chess Academy official logo"
-      className={compact ? "h-11 w-11 object-contain" : "h-16 w-auto max-w-[240px] object-contain"}
+      className={compact ? (hero ? "h-40 w-40 object-contain sm:h-48 sm:w-48" : "h-11 w-11 object-contain") : "h-16 w-auto max-w-[240px] object-contain"}
       data-testid={testId}
     />
   );
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="relative min-h-[25rem] rounded-[2rem] border border-blue-100 bg-[#F8FAFC] p-5 sm:p-8" data-testid="home-logo-feature">
               <div className="gmca-board-pattern absolute inset-0 rounded-[2rem] opacity-50" aria-hidden="true" />
               <div className="relative flex h-full flex-col items-center justify-center rounded-[1.4rem] border border-white bg-white/85 px-6 py-10 shadow-[0_24px_70px_rgba(15,23,42,0.1)] backdrop-blur-sm">
-                <div className="gmca-float flex h-48 w-48 items-center justify-center rounded-full bg-white shadow-[0_20px_45px_rgba(1,77,255,0.16)] ring-8 ring-blue-50 sm:h-56 sm:w-56" data-testid="hero-emblem-container"><Logo compact testId="hero-emblem-image" /></div>
+                <div className="gmca-float flex h-48 w-48 items-center justify-center rounded-full bg-white shadow-[0_20px_45px_rgba(1,77,255,0.16)] ring-8 ring-blue-50 sm:h-56 sm:w-56" data-testid="hero-emblem-container"><Logo compact hero testId="hero-emblem-image" /></div>
                 <p className="gmca-heading mt-8 text-center text-2xl font-bold text-slate-900" data-testid="hero-logo-caption">Where every move builds a mind</p>
                 <p className="mt-2 text-center text-sm leading-6 text-slate-500" data-testid="hero-logo-supporting-copy">Group or individual training for Beginner, Intermediate, and Advanced players.</p>
               </div>
