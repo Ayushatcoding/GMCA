@@ -96,7 +96,7 @@ function Logo({ compact = false, testId }: { compact?: boolean; testId: string }
     <img
       src={compact ? "/gmca-emblem.webp" : "/gmca-logo.webp"}
       alt="Genius Mind Chess Academy official logo"
-      className={compact ? "h-11 w-11 object-contain" : "h-14 w-auto max-w-[216px] object-contain"}
+      className={compact ? "h-11 w-11 object-contain" : "h-16 w-auto max-w-[240px] object-contain"}
       data-testid={testId}
     />
   );
