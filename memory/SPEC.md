@@ -8,6 +8,7 @@ Single-page, mobile-first website for Genius Mind Chess Academy (GMCA), a Noida 
 - Primary brand blue is sampled from the supplied logo: `#014DFF`.
 - The site uses only confirmed business facts from the request. Coach credentials, gallery photos, Facebook URL, and tagline remain clearly labeled placeholders.
 - Contact hours use the Google Maps version supplied by the owner: Mon–Thu 3:30 PM–7:30 PM (Tue/Thu until 5:30 PM), Sat–Sun 10:00 AM–1:00 PM, Friday closed. Owner confirmation is still needed because sources conflict.
+- Contact location now shown as: Learning Centre, opposite STEP BY STEP SCHOOL, Kumon, Sector 132, Noida, Uttar Pradesh 201304.
 
 ## Data model and API
 - `EnquiryCreate`: name, phone, program, message.
