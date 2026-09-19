@@ -1,25 +1,28 @@
 # Genius Mind Chess Academy — Living Spec
 
 ## Product
-Single-page, mobile-first website for Genius Mind Chess Academy (GMCA), a Noida chess academy established in 2011. The page uses anchored sections in this order: Home, About, Coaches, Programs, Fees, Tournaments, Testimonials, Gallery, Contact.
+Single-page, mobile-first static website for Genius Mind Chess Academy (GMCA), a Noida chess academy established in 2011. It includes Home, About/Why Chess, Vision & Mission, Coaches, Programs, Curriculum, Fees, live Class Schedule, live Tournaments, sheet-powered Testimonials, live Google Reviews, Drive-powered Gallery, and Contact.
 
-## Brand and content
-- Official logo assets: `frontend/public/gmca-logo.webp` for full lockup and `frontend/public/gmca-emblem.webp` for small spaces.
-- Primary brand blue is sampled from the supplied logo: `#014DFF`.
-- The site uses only confirmed business facts from the request. Coach credentials, gallery photos, Facebook URL, and tagline remain clearly labeled placeholders.
-- Contact hours use the Google Maps version supplied by the owner: Mon–Thu 3:30 PM–7:30 PM (Tue/Thu until 5:30 PM), Sat–Sun 10:00 AM–1:00 PM, Friday closed. Owner confirmation is still needed because sources conflict.
-- Contact location now shown as: Learning Centre, opposite STEP BY STEP SCHOOL, Kumon, Sector 132, Noida, Uttar Pradesh 201304.
+## Static architecture
+- The project has no backend, database, authentication, server actions, or server-side environment variables.
+- `cd frontend && yarn build` outputs the complete deployable site to `frontend/dist/`.
+- `frontend/public/config.json` is a public runtime configuration file copied to `/config.json`; it can be edited after deployment without rebuilding.
+- Placeholder values beginning with `REPLACE_WITH_` render explicit setup states.
 
-## Data model and API
-- `EnquiryCreate`: name, phone, program, message.
-- `Enquiry`: EnquiryCreate plus string UUID `id` and UTC `created_at`.
-- `POST /api/enquiries` persists contact form submissions to MongoDB and returns the saved enquiry.
-- `GET /api/enquiries` lists saved enquiries for verification/admin follow-up.
+## Public integrations
+- CallMeBot: contact-form data is sent directly from the browser to the configured WhatsApp destination. Its browser-visible credentials are not secrets. The direct `wa.me` option remains available.
+- Google Drive API v3: one public folder powers both the homepage carousel and gallery.
+- Published Google Sheets CSV: separate feeds power class schedule, tournaments, and testimonials.
+- Google Maps Embed API: location iframe.
+- Google Places via Maps JavaScript API: separate live Google reviews section with attribution.
+- Google browser keys must be restricted to the deployed HTTP referrers and only their required APIs.
+
+## Placeholder editorial content
+- Coach headshots and bios, Facebook URL, footer tagline, curriculum wording, and Vision & Mission wording await owner-approved final content.
+- Contact hours use the supplied Google Maps version and still need owner confirmation.
+- Location: Learning Centre, opposite STEP BY STEP SCHOOL, Kumon, Sector 132, Noida, Uttar Pradesh 201304.
 
 ## Key flows
-1. Visitors navigate the continuous page with sticky desktop links or a mobile hamburger menu; the active section is highlighted with scrollspy.
-2. Visitors can use blue CTAs to scroll to Contact or WhatsApp links to open the academy chat.
-3. Contact form submission persists an enquiry and shows an inline success state plus toast; API failure leaves the form usable and shows an error message.
-
-## Auth
-No authentication or gated areas. No seeded accounts.
+1. Visitors navigate the continuous page through sticky desktop or mobile navigation.
+2. Live public content loads independently; an unavailable integration never blocks the page shell.
+3. Contact submission calls CallMeBot directly and shows success after the browser dispatch completes; a configuration/error state points visitors to direct WhatsApp.

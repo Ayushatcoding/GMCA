@@ -1,0 +1,25 @@
+{
+  "callMeBot": {
+    "enabled": false,
+    "phone": "REPLACE_WITH_CALLMEBOT_PHONE",
+    "apiKey": "REPLACE_WITH_CALLMEBOT_API_KEY"
+  },
+  "googleDrive": {
+    "apiKey": "REPLACE_WITH_GOOGLE_DRIVE_BROWSER_API_KEY",
+    "folderId": "REPLACE_WITH_PUBLIC_GOOGLE_DRIVE_FOLDER_ID"
+  },
+  "googleSheets": {
+    "scheduleCsvUrl": "REPLACE_WITH_PUBLISHED_SCHEDULE_CSV_URL",
+    "tournamentsCsvUrl": "REPLACE_WITH_PUBLISHED_TOURNAMENTS_CSV_URL",
+    "testimonialsCsvUrl": "REPLACE_WITH_PUBLISHED_TESTIMONIALS_CSV_URL"
+  },
+  "googleMaps": {
+    "embedApiKey": "REPLACE_WITH_GOOGLE_MAPS_EMBED_API_KEY",
+    "placeId": "REPLACE_WITH_GOOGLE_MAPS_PLACE_ID",
+    "query": "REPLACE_WITH_MAP_ADDRESS_OR_PLACE_NAME"
+  },
+  "googlePlaces": {
+    "apiKey": "REPLACE_WITH_GOOGLE_PLACES_BROWSER_API_KEY",
+    "placeId": "REPLACE_WITH_GOOGLE_PLACES_PLACE_ID"
+  }
+}
