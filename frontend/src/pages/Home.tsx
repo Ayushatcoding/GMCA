@@ -192,7 +192,7 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a href="#contact" onClick={() => goTo("contact")} className="hidden rounded-full bg-[#014DFF] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_20px_rgba(1,77,255,0.2)] transition-transform duration-200 hover:-translate-y-0.5 sm:inline-flex" data-testid="header-book-trial-button">Book a Trial</a>
+            <a href="#contact" onClick={() => goTo("contact")} className="hidden rounded-full bg-[#014DFF] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_20px_rgba(1,77,255,0.2)] transition-transform duration-200 hover:-translate-y-0.5 min-[480px]:inline-flex" data-testid="header-book-trial-button">Book a Trial</a>
             <button type="button" onClick={() => setMenuOpen((open) => !open)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition-colors hover:border-[#014DFF] hover:text-[#014DFF] lg:hidden" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} data-testid="mobile-menu-toggle">
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
