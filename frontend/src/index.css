@@ -128,7 +128,7 @@
   html {
     @apply font-sans;
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 6.25rem;
   }
   body {
     min-width: 320px;
@@ -181,5 +181,5 @@
 }
 
 .gmca-section {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 6.25rem;
 }

@@ -104,12 +104,12 @@ const initialForm: EnquiryForm = { name: "", phone: "", program: "", message: ""
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-function Logo({ compact = false, hero = false, testId }: { compact?: boolean; hero?: boolean; testId: string }) {
+function Logo({ header = false, testId }: { header?: boolean; testId: string }) {
   return (
     <img
-      src={compact ? "/gmca-emblem.webp" : "/gmca-logo.webp"}
+      src="/gmca-logo.webp"
       alt="Genius Mind Chess Academy official logo"
-      className={compact ? (hero ? "h-40 w-40 max-h-full max-w-full object-contain sm:h-48 sm:w-48" : "h-11 w-11 max-h-full max-w-full object-contain") : "h-16 w-auto max-h-full max-w-full object-contain"}
+      className={header ? "h-full w-full object-contain object-center" : "h-16 w-auto max-w-full object-contain"}
       data-testid={testId}
     />
   );
@@ -177,10 +177,9 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#F8FAFC] text-slate-950" data-testid="academy-site">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl" data-testid="site-header">
-        <div className="mx-auto flex h-[5.25rem] max-w-7xl items-center justify-between px-5 sm:px-8">
+        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#home" onClick={() => goTo("home")} className="flex items-center gap-3" data-testid="brand-home-link">
-            <span className="hidden sm:block"><Logo testId="header-full-logo-image" /></span>
-            <span className="sm:hidden"><Logo compact testId="header-mobile-emblem-image" /></span>
+            <span className="flex h-20 w-[4.6rem] shrink-0 items-center justify-center overflow-visible" data-testid="header-logo-frame"><Logo header testId="header-full-logo-image" /></span>
             <span className="hidden border-l border-slate-200 pl-3 text-sm font-bold leading-tight text-[#014DFF] lg:block" data-testid="brand-short-name">GMCA<br /><span className="font-normal text-slate-500">Noida · Est. 2011</span></span>
           </a>
 

@@ -2,6 +2,7 @@
 
 ## Product
 Single-page, mobile-first static website for Genius Mind Chess Academy (GMCA), a Noida chess academy established in 2011. It includes Home, About/Why Chess, Vision & Mission, Coaches, Programs, Curriculum, Fees, live Class Schedule, live Tournaments, sheet-powered Testimonials, live Google Reviews, Drive-powered Gallery, and Contact.
+- The sticky header shows the complete official logo lockup, including its text banner, on both desktop and mobile; the cropped emblem is reserved for the favicon.
 
 ## Static architecture
 - The project has no backend, database, authentication, server actions, or server-side environment variables.
