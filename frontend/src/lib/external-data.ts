@@ -42,7 +42,7 @@ export async function listDriveImages(apiKey: string, folderId: string): Promise
 }
 
 export const driveImageUrl = (id: string) =>
-  `https://drive.google.com/uc?export=view&id=${encodeURIComponent(id)}`;
+  `https://drive.google.com/thumbnail?id=${encodeURIComponent(id)}&sz=w2000`;
 
 function parseCsv(input: string): string[][] {
   const source = input.replace(/^\uFEFF/, "");
