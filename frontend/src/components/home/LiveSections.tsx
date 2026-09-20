@@ -155,7 +155,7 @@ export function LiveGoogleReviews({ config }: { config?: RuntimeConfig }) {
 export function LiveMap({ config }: { config?: RuntimeConfig }) {
   const ready = Boolean(config && isConfigured(config.googleMaps.embedApiKey) && (isConfigured(config.googleMaps.placeId) || isConfigured(config.googleMaps.query)));
   if (!ready) return <SetupState testId="google-map-setup" message="Add the Maps Embed API key and either a Place ID or address query to config.json to activate the map." />;
-  return <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white" data-testid="google-map-embed"><iframe src={buildMapEmbedUrl(config!.googleMaps)} title="Genius Mind Chess Academy location map" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="h-72 w-full border-0" data-testid="google-map-iframe" /><div className="flex items-center gap-2 px-4 py-3 text-xs font-bold text-slate-500"><MapPin size={14} className="text-[#014DFF]" /> Learning Centre, Sector 132, Noida</div></div>;
+  return <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white" data-testid="google-map-embed"><iframe src={buildMapEmbedUrl(config!.googleMaps)} title="Genius Mind Chess Academy location map" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="h-72 w-full border-0" data-testid="google-map-iframe" /><div className="flex items-center gap-2 px-4 py-3 text-xs font-bold text-slate-500"><MapPin size={14} className="text-[#014DFF]" /> BL-8, Sector 116, Noida, UP 201301</div></div>;
 }
 
 export function LiveSectionLabel({ children, testId }: { children: string; testId: string }) {

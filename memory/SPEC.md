@@ -22,7 +22,7 @@ Single-page, mobile-first static website for Genius Mind Chess Academy (GMCA), a
 ## Placeholder editorial content
 - Coach headshots and bios, Facebook URL, footer tagline, curriculum wording, and Vision & Mission wording await owner-approved final content.
 - Contact hours use the supplied Google Maps version and still need owner confirmation.
-- Location: Learning Centre, opposite STEP BY STEP SCHOOL, Kumon, Sector 132, Noida, Uttar Pradesh 201304.
+- Location: BL-8, Sector 116, Noida, UP 201301.
 
 ## Key flows
 1. Visitors navigate the continuous page through sticky desktop or mobile navigation.

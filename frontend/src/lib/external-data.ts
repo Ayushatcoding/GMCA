@@ -212,6 +212,6 @@ export async function sendEnquiryViaCallMeBot(
 }
 
 export function buildMapEmbedUrl(config: RuntimeConfig["googleMaps"]) {
-  const query = config.placeId || config.query;
+  const query = config.placeId ? `place_id:${config.placeId}` : config.query;
   return `https://www.google.com/maps/embed/v1/place?${new URLSearchParams({ key: config.embedApiKey, q: query })}`;
 }

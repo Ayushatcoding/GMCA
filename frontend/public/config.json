@@ -1,25 +1,25 @@
 {
   "callMeBot": {
     "enabled": false,
-    "phone": "REPLACE_WITH_CALLMEBOT_PHONE",
-    "apiKey": "REPLACE_WITH_CALLMEBOT_API_KEY"
+    "phone": "",
+    "apiKey": ""
   },
   "googleDrive": {
-    "apiKey": "REPLACE_WITH_GOOGLE_DRIVE_BROWSER_API_KEY",
-    "folderId": "REPLACE_WITH_PUBLIC_GOOGLE_DRIVE_FOLDER_ID"
+    "apiKey": "AIzaSyBrcI1raH_73mmIENdoPRLe7QxSSE2C1Ws",
+    "folderId": "1Nh6a_UDmOsT-QK1pXGuojOJF0cbUuX7A"
   },
   "googleSheets": {
-    "scheduleCsvUrl": "REPLACE_WITH_PUBLISHED_SCHEDULE_CSV_URL",
-    "tournamentsCsvUrl": "REPLACE_WITH_PUBLISHED_TOURNAMENTS_CSV_URL",
-    "testimonialsCsvUrl": "REPLACE_WITH_PUBLISHED_TESTIMONIALS_CSV_URL"
+    "scheduleCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrDGNgxD1UKdlALZcpNAz7NllUVzyjOi66LyaeP9ohsZ7V3Gjjc2OHY_FedHEFhu3rxgCSf2awgmR7/pub?gid=0&single=true&output=csv",
+    "tournamentsCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrDGNgxD1UKdlALZcpNAz7NllUVzyjOi66LyaeP9ohsZ7V3Gjjc2OHY_FedHEFhu3rxgCSf2awgmR7/pub?gid=1390832593&single=true&output=csv",
+    "testimonialsCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrDGNgxD1UKdlALZcpNAz7NllUVzyjOi66LyaeP9ohsZ7V3Gjjc2OHY_FedHEFhu3rxgCSf2awgmR7/pub?gid=989310905&single=true&output=csv"
   },
   "googleMaps": {
-    "embedApiKey": "REPLACE_WITH_GOOGLE_MAPS_EMBED_API_KEY",
-    "placeId": "REPLACE_WITH_GOOGLE_MAPS_PLACE_ID",
-    "query": "REPLACE_WITH_MAP_ADDRESS_OR_PLACE_NAME"
+    "embedApiKey": "AIzaSyD9qDDC79UbNapCxWkFSHS5pRYakaNZvjI",
+    "placeId": "ChIJKXIYhZvoDDkRE316HEPtA3I",
+    "query": "BL-8, Sector 116, Noida, UP 201301"
   },
   "googlePlaces": {
-    "apiKey": "REPLACE_WITH_GOOGLE_PLACES_BROWSER_API_KEY",
-    "placeId": "REPLACE_WITH_GOOGLE_PLACES_PLACE_ID"
+    "apiKey": "AIzaSyDpQYyg-WMw6jR9EVvnoumDAnKt3ji11AI",
+    "placeId": "ChIJKXIYhZvoDDkRE316HEPtA3I"
   }
 }
